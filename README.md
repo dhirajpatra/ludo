@@ -46,3 +46,4 @@ Media related to Ludo at Wikimedia Commons
 
 ### How to play
 
+ ludo/img/Screenshot from 2017-05-20 21-58-31.png 
