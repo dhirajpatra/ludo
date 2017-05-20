@@ -1,0 +1,184 @@
+body {
+    padding: 0;
+    margin: 0 auto;
+}
+div#main {
+    background-color: floralwhite;
+    margin: 5px 0 0 10px;
+    width: 950px;
+}
+ 
+#ground {
+    with: 1000px;
+    margin-left: 100px;
+    margin-right:50px;
+    padding-bottom: 50px;
+}
+
+
+#board {
+    width: 500px;
+    height: 500px;
+    margin: 0 0 0 0;
+    padding: 0;
+    float: left;
+}
+
+#dice-div {
+    width:110px;
+    float: right;
+    margin-right: 10px;
+}
+
+#dice {
+    /*background-color: #4CAF50; /* Green */
+    background-image:url('../img/dice.jpeg');
+    border: none;
+    color: #000000;
+    width: 150px;
+    height: 110px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.box {
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    border: 1px solid chocolate;
+    float: left;
+    color: darkblue;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.box-hide {
+    background-color:#ffffff;
+    height: 32px;
+    width: 32px;
+    float: left;
+}
+
+.box-red {
+    background-color:red;
+    height: 30px;
+    width: 30px;
+    border: 1px solid blue;
+    float: left;
+    color:#ffffff;
+    font-size: 10px;
+}
+
+.box-blue {
+    background-color:blue;
+    height: 30px;
+    width: 30px;
+    border: 1px solid blue;
+    float: left;
+    color:#ffffff;
+    font-size: 10px;
+}
+
+.box-yellow {
+    background-color:yellow;
+    height: 30px;
+    width: 30px;
+    border: 1px solid blue;
+    float: left;
+    color:#000000;
+    font-size: 10px;
+}
+
+.box-green {
+    background-color:green;
+    height: 30px;
+    width: 30px;
+    border: 1px solid blue;
+    float: left;
+    color:#ffffff;
+    font-size: 10px;
+}
+
+ul {
+   font-size: 12px;
+    color: blue;
+    list-style-type: none;
+    width:200px;
+}
+
+#dice-result {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: red;
+}
+
+#positions {
+    border:1px solid #000000;
+    font-size: 12px;
+    color: blue;
+    float: right;
+    margin-left: 5%;
+    width: 40%;
+    height:auto;
+}
+
+.stick_position {
+    width:40px;
+    height:20px;
+    border:.5px solid #000000;
+    color:#000000;
+}
+
+#move_result {
+    font-size: 10px;
+    color: red;
+    /*animation: blinker 1s linear infinite;*/
+}
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+#refresh {
+    color: red;
+    margin:10px 0 0 15%;
+}
+
+.disabledbutton {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.home {
+    width: 480px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+#red-home {
+    float: left;
+    background-color: red;
+    padding: 5px;
+}
+
+#green-home {
+    float: right;
+    background-color: green;
+    padding: 5px;
+}
+
+#blue-home {
+    float: left;
+    background-color: blue;
+    padding: 5px;
+}
+
+#yellow-home {
+    float: right;
+    background-color: yellow;
+    padding: 5px;
+}
