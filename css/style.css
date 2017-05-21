@@ -25,9 +25,8 @@ div#main {
 }
 
 #dice-div {
-    width:110px;
+    width:150px;
     float: right;
-    margin-right: 10px;
 }
 
 #dice {
@@ -115,6 +114,11 @@ ul {
     color: red;
 }
 
+#all-stick-positions {
+    width: 400px;
+    margin-left: 600px;
+}
+
 #positions {
     border:1px solid #000000;
     font-size: 12px;
@@ -143,7 +147,7 @@ ul {
 
 #refresh {
     color: red;
-    margin:10px 0 0 15%;
+    margin:10px 0 0 12%;
 }
 
 .disabledbutton {
