@@ -4,6 +4,7 @@ require_once "LudoClass.php";
 
 $ludoObj = new LudoClass();
 
+// ajax api request capture
 $post = json_decode($_POST['data']);
 
 if (isset($post->action) && !empty($post->action)) {
@@ -11,11 +12,11 @@ if (isset($post->action) && !empty($post->action)) {
     $action = $post->action;
 
     switch ($action) {
-        case 'diceRoll' : diceRoll($ludoObj);
+        case 'diceRoll' : diceRollAction($ludoObj);
             break;
-        case 'move' : move($post, $ludoObj);
+        case 'move' : moveAction($post, $ludoObj);
             break;
-        case 'refresh' : refresh($ludoObj);
+        case 'refresh' : refreshAction($ludoObj);
             break;
     }
 }
@@ -24,7 +25,7 @@ if (isset($post->action) && !empty($post->action)) {
 /**
  *  this function will randomly generate dice result for specific player
  */
-function diceRoll ($ludoObj) {
+function diceRollAction ($ludoObj) {
     $player = null;
 
     // who's turn it is
@@ -62,7 +63,7 @@ function diceRoll ($ludoObj) {
  * @param $post
  * @param $ludoObj
  */
-function move ($post, $ludoObj) {
+function moveAction ($post, $ludoObj) {
 
     $boxId = $post->boxId;
     $currentValue = $post->currentValue;
@@ -176,7 +177,7 @@ function nextMove ($details) {
  * refresh the game with destroying all existing sessions
  * @return bool
  */
-function refresh() {
+function refreshAction () {
     session_destroy();
 
     return true;
