@@ -1,8 +1,24 @@
-# ludo
-Ludo game by html, css, jquery and PHP
+# Ludo
+Ludo game by html, css, jquery and PHP 7
 
-Ludo
+### How to run
+Need to keep the whole folder into web root or sub folder eg. /var/www/html/ludo
+Run from browser eg. http://localhost/ludo
 
+### How to play
+Left side is game board and right side of the screen is Dice to roll and choose the piece to move for a player.
+Bellow the board will get Refresh the game button to clean whole game plan and session data to start a new game. Best view at 1200 X 1000 screen size.
+
+To start the game click on 'Refresh the whole game' button. Then click on dice. As per dice result [player] click on specific position boxes above. See that peice movement at board. If you have only one piece waiting to end the game. But not getting exact move to reach the end then your piece will remain there until getting exact dice result.
+
+Click on Dice to roll. It will randomly choose a player [starting with red] and result too random in range of 1 to 6.
+After getting the result. You have to click on a position box as per the player and piece want to move. If the player area is wrong as per disce result and you clicked on. Then it will restrict and warn. You can't give wrong move. After correct click to move. You can see the pice in board in new plce/box. If that specific piece not come out from home yet then you need to wait for dice result 6 to come out.
+
+Click on the specific box to give a move for that piece of that player. If dice result is 6 for that player only then he can move a piece from home [blank] and will get another dice role chance.
+
+This game has several restriction in built to restrict the wrong move. It has several calculation inside to make game as real. 
+
+### History
 Game plan
 Designer(s)
 Josef Friedrich Schmidt
@@ -43,7 +59,3 @@ Variation which is played by most players: A player who has no pieces in the gam
 External links
 Media related to Ludo at Wikimedia Commons
 "Ludo: History of a classic game" ( "Story of a Classic Game"), Nuremberg Toy Museum (German)
-
-### How to play
-
- ludo/img/Screenshot from 2017-05-20 21-58-31.png 
