@@ -21,9 +21,8 @@ if (isset($post->action) && !empty($post->action)) {
 }
 
 
-
 /**
- *
+ *  this function will randomly generate dice result for specific player
  */
 function diceRoll ($ludoObj) {
     $player = null;
@@ -60,6 +59,8 @@ function diceRoll ($ludoObj) {
 
 /**
  * this will check for every move requesting by player for a specific piece
+ * @param $post
+ * @param $ludoObj
  */
 function move ($post, $ludoObj) {
 
@@ -86,13 +87,17 @@ function move ($post, $ludoObj) {
 
     // checking if this move is for specific player on which it requesting to move for
     if (count($boxIdDetails) > 0 && $boxIdDetails[1] == substr($ludoObj->players[$_SESSION['turn']], 0, 1)) {
+
         // is it a first move for the home piece
         if ($_SESSION['last_result'] == 6 && $currentValue == '' && (!in_array($boxIdDetails[2], $_SESSION[$ludoObj->players[$player] . 'pieceNotInGame']))) {
+
             $_SESSION[$ludoObj->players[$player].$boxIdDetails[2].'LatestPosition'] = $_SESSION[$ludoObj->players[$player].'FirstPosition'];
 
             echo $_SESSION[$ludoObj->players[$player].$boxIdDetails[2].'LatestPosition'];
+
         // or it is move for a piece which is already out of home
         } elseif (strlen($currentValue) === 4 || $currentValue != '' && (!in_array($boxIdDetails[2], $_SESSION[$ludoObj->players[$player] . 'pieceNotInGame']))) {
+
             $details = array(
                 'player' => $ludoObj->players[$player],
                 'piece' => $boxIdDetails[2],
@@ -106,6 +111,7 @@ function move ($post, $ludoObj) {
         } elseif ($currentValue == '' && $_SESSION['last_result'] < 6  && (!in_array($boxIdDetails[2], $_SESSION[$ludoObj->players[$player] . 'pieceNotInGame']))) { // also -1 means already reched end for that piece
 
             echo 'This piece need 6 to move out from home. Try other piece.';
+
         // already reached end
         } elseif ($currentValue == -1) { // also -1 means already reched end for that piece
             // remove that piece from game
@@ -137,15 +143,18 @@ function nextMove ($details) {
 
     // loop all positions for this player's specific piece
     foreach ($positions as $position) {
+
         // where is right now
         if ($position === $latestPosition && $nowMoveCountStart == 0) {
             $nowMoveCountStart = 1;
             $toMove++;
+
         // reach the point need to move from last point / box
         } elseif ($toMove == $needToMove && $nowMoveCountStart == 1) {
             $reached = 1;
             $_SESSION[$details['player'].$details['piece'].'LatestPosition'] = $position;
             break;
+
         // not come where is existing place/box
         } elseif($nowMoveCountStart == 1) {
             $toMove++;

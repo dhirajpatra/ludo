@@ -10,7 +10,9 @@ class LudoClass
 
     public $players = array('red', 'blue', 'yellow', 'green');
 
-
+    /**
+     * LudoClass constructor.
+     */
     function __construct()
     {
         session_start();
