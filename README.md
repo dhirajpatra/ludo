@@ -1,7 +1,7 @@
 # Ludo
 Ludo game by html, css, jquery and PHP 7
 
-![Screen Shot]( ludo/Screenshot from 2017-05-20 21-58-31.png )
+![Screen Shot](ludo/Screenshot from 2017-05-20 21-58-31.png?raw=true "Screen Shot for Game")
 
 ### How to run
 Need to keep the whole folder into web root or sub folder eg. /var/www/html/ludo
