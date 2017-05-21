@@ -1,6 +1,8 @@
 # Ludo
 Ludo game by html, css, jquery and PHP 7
 
+[Screen Shot](Screenshot from 2017-05-20 21-58-31.png)
+
 ### How to run
 Need to keep the whole folder into web root or sub folder eg. /var/www/html/ludo
 Run from browser eg. http://localhost/ludo
